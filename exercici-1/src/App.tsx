@@ -1,23 +1,24 @@
+import { useEffect, useState } from 'react'
 import './App.css'
-import users from './mocks/users.json';
+import User from './components/User';
 
 function App() {
+  const [users, setUsers] = useState<Result[]>([]);
 
+  useEffect(() => {
+    fetch("https://randomuser.me/api?results=20")
+      .then(response => response.json())
+      .then((data: ApiResponse) => setUsers(data.results));
+  }, [])
 
   return (
-    <div>
-      {users.results.map((user) => {
+    <ul className='user-list'>
+      {users.map((user: Result) => {
         return (
-          <div>
-            <img alt="profile picture" src={user.picture.medium} />
-            <p style={{ margin: '0px 0px 32px' }}>
-              <strong>{user.name.first}</strong><br />
-              {user.location.country}<br />
-            </p>
-          </div>
+          <User userData={user} key={user.id.value} />
         )
       })}
-    </div>
+    </ul>
   )
 }
 

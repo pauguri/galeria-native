@@ -1,0 +1,23 @@
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.message {
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    width: 40%;
+}
+
+.message.mine {
+    background-color: rgb(228, 228, 133);
+    align-self: end;
+}
+
+.message.others {
+    background-color: rgb(133, 176, 224);
+}

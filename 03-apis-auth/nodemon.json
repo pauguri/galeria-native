@@ -1,0 +1,7 @@
+{
+    "watch": ["./"],
+    "ext": "js,jsx,ts,tsx",
+    "ignore": ["node_modules", ".vscode", "nodemon.json", "watchAndCopy.mjs"],
+    "exec": "node watchAndCopy.mjs"
+  }
+  

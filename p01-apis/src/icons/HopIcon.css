@@ -1,0 +1,7 @@
+.hop-icon {
+    @apply relative border border-black rounded-md select-none shrink-0 cursor-help;
+}
+
+.hop-icon span {
+    @apply absolute font-sans font-bold leading-none align-middle -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
+}

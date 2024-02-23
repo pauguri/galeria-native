@@ -1,0 +1,59 @@
+.beer-item {
+  @apply flex flex-col justify-between border-4 rounded-xl;
+}
+
+.beer-item .header {
+  @apply flex gap-4 p-8;
+}
+
+.beer-item img {
+  @apply object-contain object-center w-1/5 h-auto max-h-52 shrink-0;
+}
+
+.beer-item .content {
+  @apply flex-1;
+}
+
+.beer-item .content h2 {
+  @apply text-2xl font-bold;
+}
+
+.beer-item .content .tagline-container {
+  @apply flex gap-2;
+}
+
+.beer-item .content .tagline {
+  @apply text-sm italic;
+}
+
+.beer-item .content .description {
+  @apply pt-4 text-sm;
+}
+
+.beer-item .metadata {
+  @apply flex flex-col gap-2 p-8 text-sm border-t-2;
+}
+
+.beer-item .metadata-item {
+  @apply flex items-start justify-between gap-2;
+}
+
+.beer-item .metadata-item .label {
+  @apply flex items-center gap-2 font-bold grow;
+}
+
+.beer-item .metadata-item .label>* {
+  @apply shrink-0;
+}
+
+.beer-item .metadata-item .separator {
+  @apply max-sm:hidden flex-1 h-0.5 mx-8 opacity-40;
+}
+
+.beer-item .metadata-item .value {
+  @apply text-right;
+}
+
+.beer-item .metadata-item .value.hops-list li {
+  @apply flex items-center justify-end gap-2;
+}

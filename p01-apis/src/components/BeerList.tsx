@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react"
-import { fetchPunkApi } from "../utils/api"
+import { useEffect, useState } from "react";
 import { Beer } from "../@types/types";
-import Loader from "./Loader";
+import { fetchPunkApi } from "../utils/api";
+import BeerItem from "./BeerItem";
 import './BeerList.css';
-import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import 'swiper/swiper-bundle.css';
-import { colorFromEBC } from "../utils/colorUtils";
-import { Pagination } from "swiper/modules";
-import BeerSwiper from "./BeerSwiper";
+import Loader from "./Loader";
 
 export default function BeerList({ fromEBC, toEBC }: { fromEBC: number, toEBC: number }) {
   const [beers, setBeers] = useState<Beer[] | null>(null);
@@ -36,9 +32,9 @@ export default function BeerList({ fromEBC, toEBC }: { fromEBC: number, toEBC: n
   return (
     <section className="beer-list-container">
       {loading && <Loader />}
-      {beers && <div className="beer-list">
-        <BeerSwiper beerArray={beers} />
-      </div>}
+      {beers && <ul className="beer-list">
+        {beers.map(beer => <BeerItem key={beer.id} beer={beer} />)}
+      </ul>}
     </section>
   )
 }

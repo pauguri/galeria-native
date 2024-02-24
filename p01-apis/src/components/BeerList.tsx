@@ -22,7 +22,6 @@ export default function BeerList({ ebcRange }: { ebcRange: NumberRange }) {
 
       const beers: Beer[] = await fetchPunkApi(`?ebc_lt=${ebcRange.to}&ebc_gt=${ebcRange.from}&per_page=10`);
       beers.sort((a, b) => a.ebc - b.ebc);
-      await new Promise(resolve => setTimeout(resolve, 1000));
       setBeers(beers);
     } catch (e) {
       setError((e as Error).message);

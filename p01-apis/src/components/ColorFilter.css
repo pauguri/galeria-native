@@ -1,0 +1,62 @@
+.color-filter {
+  @apply container flex items-center gap-4 px-4 py-8 mx-auto md:gap-8 max-md:flex-col lg:px-8 lg:py-16;
+}
+
+.slider-container {
+  @apply relative mx-2.5 w-full md:flex-1;
+}
+
+.color-filter-slider {
+  @apply p-0 border-none shadow-none bg-none;
+}
+
+.color-filter-slider .thumb-left {
+  background-color: var(--color-filter-left-color);
+}
+
+.color-filter-slider .thumb-right {
+  background-color: var(--color-filter-right-color);
+}
+
+.color-filter-slider .thumb::before {
+  @apply my-3 -mx-2.5 shadow-none border-4 border-white;
+}
+
+.color-filter-slider .thumb .caption>* {
+  @apply hidden;
+}
+
+.color-filter-slider .bar {
+  @apply h-12;
+}
+
+.color-filter-slider .bar-left,
+.color-filter-slider .bar-inner,
+.color-filter-slider .bar-right {
+  @apply border-none rounded-none shadow-none;
+}
+
+.color-filter-slider .bar-inner {
+  @apply bg-transparent;
+}
+
+.color-filter-slider .bar-left,
+.color-filter-slider .bar-right {
+  @apply bg-white/80;
+}
+
+.color-filter-slider .bar-left {
+  @apply rounded-l-lg;
+}
+
+.color-filter-slider .bar-right {
+  @apply rounded-r-lg;
+}
+
+.slider-gradient {
+  @apply absolute inset-0 rounded-lg pointer-events-none -z-10;
+}
+
+.color-filter>button {
+  @apply px-4 font-bold transition-colors border-4 rounded-lg max-md:text-sm max-md:py-2 md:h-12 md:px-5 w-fit shrink-0 border-primary text-primary bg-primary/15 hover:border-primary-dark hover:text-primary-dark hover:bg-primary/30;
+}

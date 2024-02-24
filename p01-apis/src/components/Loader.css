@@ -1,22 +1,22 @@
-/* HTML: <div class="loader"></div> */
 .loader {
-  display: inline-grid;
-  padding: 5px;
-  background: #fff;
-  filter: blur(4px) contrast(12);
+  @apply grid w-full gap-4 lg:grid-cols-2 xl:gap-8;
 }
-.loader:before {
-  content: "";
-  height: 40px;
-  aspect-ratio: 3;
-  --c: #0000 64%,#000 66% 98%,#0000 101%;
-  background:
-    radial-gradient(35% 146% at 50% 159%,var(--c)) 0 0,
-    radial-gradient(35% 146% at 50% -59%,var(--c)) 100% 100%;
-  background-size: calc(200%/3) 50%;
-  background-repeat: repeat-x;
-  animation: l11 .8s infinite linear;
+
+.loader-item {
+  @apply rounded-xl bg-secondary/30 h-96;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
-@keyframes l11{
-  to {background-position: -200% 0,-100% 100%}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }

@@ -1,0 +1,11 @@
+header {
+  @apply container flex flex-col items-center px-4 pt-8 mx-auto text-center lg:pb-4 lg:px-8 lg:pt-16;
+}
+
+header .title {
+  @apply text-2xl font-bold md:text-4xl text-primary-dark;
+}
+
+header .subtitle {
+  @apply italic md:text-lg text-primary;
+}

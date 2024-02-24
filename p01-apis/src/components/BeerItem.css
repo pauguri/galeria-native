@@ -15,7 +15,7 @@
 }
 
 .beer-item .content h2 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-primary-dark;
 }
 
 .beer-item .content .tagline-container {
@@ -39,7 +39,7 @@
 }
 
 .beer-item .metadata-item .label {
-  @apply flex items-center gap-2 font-bold grow;
+  @apply flex items-center gap-2 font-bold text-primary grow;
 }
 
 .beer-item .metadata-item .label>* {
@@ -47,7 +47,7 @@
 }
 
 .beer-item .metadata-item .separator {
-  @apply max-sm:hidden flex-1 h-0.5 mx-8 opacity-40;
+  @apply max-sm:hidden flex-1 h-0.5 mx-8 bg-primary/30;
 }
 
 .beer-item .metadata-item .value {

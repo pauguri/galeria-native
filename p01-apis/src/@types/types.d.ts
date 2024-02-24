@@ -1,5 +1,11 @@
-export type SRMColors = {
-  [key: string]: string;
+export type NumberRange = {
+  from: number;
+  to: number;
+};
+
+export type ErrorWithStatus = {
+  status: number;
+  message: string;
 };
 
 // PUNK API TYPES

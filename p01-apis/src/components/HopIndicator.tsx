@@ -5,19 +5,9 @@ export default function HopIcon({ stage, size }: { stage: string, size: number }
     const [letter, setLetter] = useState("");
 
     useEffect(() => {
-        switch (stage) {
-            case "start":
-                setLetter("S");
-                break;
-            case "middle":
-                setLetter("M");
-                break;
-            case "end":
-                setLetter("E");
-                break;
-            default:
-                setLetter("");
-                break;
+        const letter = stage[0].toUpperCase();
+        if (letter) {
+            setLetter(letter);
         }
     }, [stage]);
 

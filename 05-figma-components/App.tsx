@@ -8,7 +8,6 @@ export default function App() {
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
-        <StatusBar style="auto" />
 
         {/* Notice */}
         <Notice type="success" message='Checkout' label='7 items' />
@@ -28,7 +27,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   scrollView: {
-    paddingTop: 32,
+    paddingTop: 16,
     backgroundColor: '#ddd',
   },
   container: {
